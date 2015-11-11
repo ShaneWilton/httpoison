@@ -1,6 +1,6 @@
 defmodule HTTPoison.Response do
-  defstruct status_code: nil, body: nil, headers: []
-  @type t :: %__MODULE__{status_code: integer, body: binary, headers: list}
+  defstruct status_code: nil, body: nil, headers: [], location: nil
+  @type t :: %__MODULE__{status_code: integer, body: binary, headers: list, location: binary}
 end
 
 defmodule HTTPoison.AsyncResponse do
@@ -65,4 +65,3 @@ defmodule HTTPoison do
 
   use HTTPoison.Base
 end
-
